@@ -1,8 +1,28 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0d0d0d;
-  color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(
+        -45deg,
+        #000000,
+        #1a0000,
+        #330000,
+        #000000
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* NAVBAR */
@@ -44,7 +64,18 @@ nav a:hover {
 }
 
 .hero span {
-  color: maroon;
+    color: maroon;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px maroon;
+    }
+    to {
+        text-shadow: 0 0 25px red,
+                     0 0 40px maroon;
+    }
 }
 
 .hero p {
@@ -175,4 +206,43 @@ footer {
 .contact-form button:hover {
   background: #a00000;
   transform: scale(1.05);
+}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.card {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px maroon;
 }
