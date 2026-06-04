@@ -3,16 +3,21 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background: linear-gradient(
-        -45deg,
+        135deg,
         #000000,
         #1a0000,
         #330000,
         #000000
     );
     background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+    animation: gradientMove 10s ease infinite;
 }
 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
