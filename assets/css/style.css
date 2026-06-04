@@ -82,16 +82,8 @@ nav a:hover {
 
 .hero span {
     color: maroon;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px maroon;
-    }
-    to {
-        text-shadow: 0 0 25px red, 0 0 40px maroon;
-    }
+    animation: none;
+    text-shadow: none;
 }
 
 .hero p {
