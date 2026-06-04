@@ -246,3 +246,50 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 0 20px maroon;
 }
+/* Background Animation */
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(128, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: animate 15s linear infinite;
+    bottom: -150px;
+}
+
+/* Different positions */
+.particles span:nth-child(1){left:10%; width:15px; height:15px; animation-duration:12s;}
+.particles span:nth-child(2){left:20%; width:25px; height:25px; animation-duration:18s;}
+.particles span:nth-child(3){left:35%; width:20px; height:20px; animation-duration:14s;}
+.particles span:nth-child(4){left:50%; width:30px; height:30px; animation-duration:20s;}
+.particles span:nth-child(5){left:65%; width:18px; height:18px; animation-duration:16s;}
+.particles span:nth-child(6){left:75%; width:25px; height:25px; animation-duration:22s;}
+.particles span:nth-child(7){left:85%; width:15px; height:15px; animation-duration:13s;}
+.particles span:nth-child(8){left:95%; width:20px; height:20px; animation-duration:17s;}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
